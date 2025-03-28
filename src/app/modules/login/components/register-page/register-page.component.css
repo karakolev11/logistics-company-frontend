@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    padding: 16px;
+    overflow-y: auto;
+}
+  
+mat-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background: white;
+    max-height: 90vh; /* Limit height */
+    overflow-y: auto; /* Enable scroll */
+    padding-right: 20px; /* Avoid scroll overlay on input fields */
+}
+  
+mat-card .mat-card-content {
+    overflow-y: auto;
+}
+  

@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-toolbar {
+    @apply bg-blue-600 text-white h-20 flex items-center justify-between px-8 shadow-lg;
+}
+
+mat-button {
+    @apply text-lg font-semibold hover:text-gray-200;
+}
+
+mat-form-field {
+    @apply w-full;
+}

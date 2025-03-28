@@ -8,8 +8,8 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'register', component: RegisterPageComponent },
   // { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] }, // Protect home page
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home if logged in
-  { path: '**', redirectTo: '/login' }, // Redirect unknown routes to login
+  // { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to home if logged in
+  // { path: '**', redirectTo: '/login' }, // Redirect unknown routes to login
 ];
 
 @NgModule({

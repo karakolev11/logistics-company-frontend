@@ -1,7 +1,26 @@
-<nav>
-    <ul>
-        <li><a routerLink="/home">Home</a></li>
-        <li><a routerLink="/profile">Profile</a></li>
-        <li><a (click)="logout()">Logout</a></li>
-    </ul>
-</nav>
+<mat-toolbar class="bg-blue-600 text-white h-20 flex items-center justify-between px-8 shadow-lg">
+
+    <div class="md:flex space-x-8">
+      <a mat-button routerLink="/home" class="text-lg font-semibold hover:text-gray-200">Home</a>
+      <a mat-button routerLink="/about" class="text-lg font-semibold hover:text-gray-200">About</a>
+      <a mat-button routerLink="/services" class="text-lg font-semibold hover:text-gray-200">Services</a>
+      <a mat-button routerLink="/contact" class="text-lg font-semibold hover:text-gray-200">Contact</a>
+    </div>
+  
+    <div class="flex items-center space-x-4">
+      <button *ngIf="!isLoggedIn" mat-icon-button (click)="navigateToLogin()">
+        <mat-icon class="text-3xl">login</mat-icon>
+      </button>
+  
+      <div *ngIf="isLoggedIn" class="flex items-center space-x-4">
+        <button mat-icon-button (click)="navigateToProfile()">
+          <mat-icon class="text-3xl">account_circle</mat-icon>
+        </button>
+        <button mat-button class="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600"
+          (click)="logout()">
+          Logout
+        </button>
+      </div>
+    </div>
+  </mat-toolbar>
+  
